@@ -20,9 +20,7 @@ def generate_token():
     
     response = requests.get(api_URL, auth=HTTPBasicAuth(consumer_key, consumer_secret))
     json_response = response.json()
-    my_access_token = json_response['access_token']
-    access_token = my_access_token
-
+    access_token = json_response['access_token']
     return access_token
 
 def generate_passwd(time_stamp):
