@@ -1,8 +1,8 @@
 import requests
 from requests.auth import HTTPBasicAuth
 
-from access_token import generate_token
-from encoder import generate_passwd
+from utils import generate_token
+from utils import generate_passwd
 from utils import get_timestamp
 import keys
 
@@ -18,7 +18,7 @@ def lipa_na_mpesa():
         "Password": decoded_password,
         "Timestamp": time_stamp,
         "TransactionType": "CustomerPayBillOnline",
-        "Amount": "1",
+        "Amount": "2",
         "PartyA": keys.PhoneNumber,
         "PartyB": keys.business_code,
         "PhoneNumber": keys.PhoneNumber,
