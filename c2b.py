@@ -16,7 +16,6 @@ def register_url():
 
     response = requests.post(api_url, json = request, headers=headers)
 
-    print (response.text)
 #register_url() - url already registered; function is run once hence # comment
 
 def simulate_c2b():
