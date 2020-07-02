@@ -10,8 +10,8 @@ def register_url():
     headers = { "Authorization": "Bearer %s" % access_token }
     request = { "ShortCode": keys.shortcode,
         "ResponseType": "Completed",
-        "ConfirmationURL": "https://micronics.co.ke/lipa/confirmation",
-        "ValidationURL": "https://micronics.co.ke/lipa/validation"
+        "ConfirmationURL": "Your ConfirmationURL",
+        "ValidationURL": "Your ValidationURL"
     }
 
     response = requests.post(api_url, json = request, headers=headers)
@@ -27,9 +27,8 @@ def simulate_c2b():
     "CommandID": "CustomerPayBillOnline",
     "Amount": "4",
     "Msisdn": keys.test_msisdn,
-    "BillRefNumber": "Inv-0004" }
+    "BillRefNumber": "Bill_ref" }
 
     response = requests.post(api_url, json = request, headers=headers)
 
-    print (response.text)
 simulate_c2b()
